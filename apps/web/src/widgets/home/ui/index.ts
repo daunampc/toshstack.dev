@@ -1,0 +1,6 @@
+export { default as HeroSection } from './hero-section'
+export { default as HowItWorksSection } from './how-it-works-section'
+export { default as FeatureSection } from './feature-section'
+export { default as StatsSection } from './stats-section'
+export { default as ReadersChoiceSection } from './readers-choice-section'
+export { default as BannerSection } from './banner-section'

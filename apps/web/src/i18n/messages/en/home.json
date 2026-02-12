@@ -1,0 +1,24 @@
+{
+  "search": {
+    "placeholder": "Search the docs..."
+  },
+  "buttons": {
+    "read": "Read article",
+    "viewAll": "View all"
+  },
+  "time": {
+    "hoursAgo": "{count} hours ago",
+    "minutesAgo": "{count} minutes ago"
+  },
+  "badges": {
+    "bestOfWeek": "BEST OF THE WEEK"
+  },
+  "labels": {
+    "recommended": "Recommended",
+    "source": "{source}"
+  },
+  "tags": {
+    "hot": "#Hots new",
+    "analytics": "#Analytics"
+  }
+}

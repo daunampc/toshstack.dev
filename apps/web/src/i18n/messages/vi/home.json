@@ -1,0 +1,15 @@
+{
+  "hero": {
+    "source": "Blockchain News",
+    "title": "Giải pháp cần dễ dàng mở rộng trong khi các module liên kết lỏng nhưng vẫn gắn kết cao.",
+    "subtitle": "",
+    "cta": "@common.buttons.read"
+  },
+  "list": {
+    "card": {
+      "source": "{source}",
+      "hoursAgo": "@common.time.hoursAgo",
+      "title": "{title}"
+    }
+  }
+}
