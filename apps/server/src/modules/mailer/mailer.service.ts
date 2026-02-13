@@ -4,6 +4,7 @@ import { SentMessageInfo } from 'nodemailer';
 import { UserEntity } from '../users/entities/user.entity';
 import { VerifyOtpInput } from './types/mailer.types';
 import { emailHtml } from '@toshstack/email';
+import { UserRole } from '@toshstack/domain';
 @Injectable()
 export class MailerService {
   constructor(private readonly mailerService: MailerServiceFs) {}
@@ -39,12 +40,20 @@ export class MailerService {
       },
     });
   }
-
-  async testRender(): Promise<any> {
+  async welcomeRegister(
+    full_name: string,
+    email: string,
+  ): Promise<SentMessageInfo> {
+    if (!full_name || !email) return false;
+    const html = await emailHtml({
+      fullName: full_name,
+      email: email,
+      unsubscribeUrl: '124',
+    });
     return await this.mailerService.sendMail({
-      to: 'daunampc@gmail.com',
-      subject: 'Your OTP code',
-      html: emailHtml,
+      to: email,
+      subject: 'Welcome to Toshstack.dev',
+      html: html,
     });
   }
 }

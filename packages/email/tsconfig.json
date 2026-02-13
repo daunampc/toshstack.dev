@@ -1,17 +1,18 @@
 {
-  "extends": "../../tsconfig.json",
   "compilerOptions": {
     "jsx": "react-jsx",
     "module": "CommonJS",
+    "moduleResolution": "node",
     "target": "ES2022",
     "declaration": true,
     "outDir": "dist",
+    "rootDir": ".",
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "strict": true,
+    "resolveJsonModule": true
   },
-  "include": [
-    "emails",
-    "index.ts"
-  ]
+  "include": ["emails", "index.ts"],
+  "exclude": ["node_modules", "dist"]
 }

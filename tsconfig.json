@@ -5,11 +5,8 @@
       "@server/*": [
         "apps/server/src/*"
       ],
-      // "@web/*": [
-      //   "apps/web/src/*"
-      // ],
-      "@toshstack/email": [
-        "packages/email/dist/*"
+      "@web/*": [
+        "apps/web/src/*"
       ]
     }
   }

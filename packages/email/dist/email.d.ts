@@ -1,1 +1,1 @@
-export declare const emailHtml: string;
+export declare const emailHtml: Promise<string>;

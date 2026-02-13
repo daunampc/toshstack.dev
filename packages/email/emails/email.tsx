@@ -6,21 +6,27 @@ import {
   Section,
   Text,
   Button,
-  Preview,
   Hr,
+  Link,
+  Preview,
 } from "@react-email/components";
+import { render } from '@react-email/components';
 import { JSX } from "react";
 
-const Email = (): JSX.Element => {
+
+const Email = ({ fullName, email, unsubscribeUrl }: { fullName: string, email: string, unsubscribeUrl: string }): JSX.Element => {
   return (
     <Html>
       <Head />
-      <Preview>Welcome to Toshstack.dev – Build beautifully.</Preview>
+      <Preview>
+        {fullName}, welcome to Toshstack – Build, Share, Monetize.
+      </Preview>
+
       <Body
         style={{
           margin: 0,
           padding: 0,
-          backgroundColor: "#0f172a", // Tokyo night navy
+          backgroundColor: "#f3f4f6",
           fontFamily: "Helvetica, Arial, sans-serif",
         }}
       >
@@ -28,83 +34,158 @@ const Email = (): JSX.Element => {
           style={{
             maxWidth: "600px",
             margin: "40px auto",
-            backgroundColor: "#111827",
-            borderRadius: "16px",
-            padding: "40px 30px",
-            color: "#e5e7eb",
+            backgroundColor: "#ffffff",
+            borderRadius: "20px",
+            padding: "48px 36px",
+            boxShadow: "0 8px 30px rgba(0,0,0,0.05)",
           }}
         >
+          {/* Header */}
           <Section>
             <Text
               style={{
-                fontSize: "28px",
-                fontWeight: "bold",
-                marginBottom: "10px",
-                color: "#f472b6", // sakura pink
+                fontSize: "30px",
+                fontWeight: "700",
+                color: "#ec4899",
+                marginBottom: "8px",
               }}
             >
-              Welcome to Toshstack.dev 🌸
+              Welcome to Toshstack.dev, {fullName} 🌸
+            </Text>
+
+            <Text
+              style={{
+                fontSize: "15px",
+                color: "#6b7280",
+                marginBottom: "28px",
+              }}
+            >
+              Your account is registered with <strong>{email}</strong>
+            </Text>
+          </Section>
+
+          {/* Main Content */}
+          <Section>
+            <Text
+              style={{
+                fontSize: "16px",
+                lineHeight: "28px",
+                color: "#374151",
+                marginBottom: "20px",
+              }}
+            >
+              Toshstack.dev is a next-generation developer platform combining
+              community discussion, high-quality technical publishing, and a
+              built-in digital marketplace.
             </Text>
 
             <Text
               style={{
                 fontSize: "16px",
-                lineHeight: "26px",
-                color: "#cbd5e1",
+                lineHeight: "28px",
+                color: "#374151",
+                marginBottom: "20px",
               }}
             >
-              Greetings from Tokyo.
-              <br />
-              <br />
-              We're excited to have you join our journey — where code meets
-              creativity and modern web craftsmanship.
-              <br />
-              <br />
-              Toshstack.dev is built for developers who appreciate clean
-              architecture, elegant design, and purposeful engineering.
+              It brings together the open conversation style of Reddit,
+              the publishing depth of Medium, and the developer focus of Dev.to —
+              while allowing creators to sell digital products and tools.
+            </Text>
+
+            <Text
+              style={{
+                fontSize: "16px",
+                lineHeight: "28px",
+                color: "#374151",
+                marginBottom: "28px",
+              }}
+            >
+              On Toshstack, you can:
+              <br />• Publish technical articles
+              <br />• Start meaningful discussions
+              <br />• Build your developer reputation
+              <br />• Monetize your knowledge through digital products
+            </Text>
+
+            <Text
+              style={{
+                fontSize: "16px",
+                lineHeight: "28px",
+                color: "#374151",
+                marginBottom: "36px",
+              }}
+            >
+              Whether you're here to learn, contribute, or grow your audience —
+              this is your space to build impact.
             </Text>
           </Section>
 
-          <Section style={{ textAlign: "center", marginTop: "30px" }}>
+          {/* CTA */}
+          <Section style={{ textAlign: "center" }}>
             <Button
               href="https://toshstack.dev"
               style={{
-                backgroundColor: "#6366f1", // anime indigo
+                backgroundColor: "#6366f1",
                 color: "#ffffff",
-                padding: "14px 28px",
+                padding: "14px 34px",
                 borderRadius: "999px",
-                textDecoration: "none",
-                fontWeight: "bold",
                 fontSize: "16px",
+                fontWeight: "600",
+                textDecoration: "none",
                 display: "inline-block",
               }}
             >
-              Explore Toshstack →
+              Enter Toshstack →
             </Button>
           </Section>
 
           <Hr
             style={{
-              borderColor: "#1f2937",
-              margin: "40px 0 20px 0",
+              margin: "40px 0 24px 0",
+              borderColor: "#e5e7eb",
             }}
           />
 
-          <Text
-            style={{
-              fontSize: "13px",
-              color: "#6b7280",
-              textAlign: "center",
-            }}
-          >
-            Crafted with passion in Tokyo 🇯🇵
-            <br />
-            © {new Date().getFullYear()} Toshstack.dev
-          </Text>
+          {/* Footer */}
+          <Section style={{ textAlign: "center" }}>
+            <Text
+              style={{
+                fontSize: "13px",
+                color: "#9ca3af",
+                marginBottom: "14px",
+              }}
+            >
+              Built for developers. Designed with clarity. 🇯🇵
+              <br />
+              © {new Date().getFullYear()} Toshstack.dev
+            </Text>
+
+            <Text
+              style={{
+                fontSize: "12px",
+                color: "#9ca3af",
+                lineHeight: "20px",
+              }}
+            >
+              This email was sent to <strong>{email}</strong>.
+              <br />
+              If you no longer wish to receive updates, you can{" "}
+              <Link
+                href={unsubscribeUrl}
+                style={{
+                  color: "#6366f1",
+                  textDecoration: "underline",
+                }}
+              >
+                unsubscribe here
+              </Link>.
+            </Text>
+          </Section>
         </Container>
       </Body>
-    </Html>
-  );
-};
+    </Html>);
+}
 
-export default Email;
+
+export const emailHtml = ({ fullName, email, unsubscribeUrl }: { fullName: string, email: string, unsubscribeUrl: string }) => render(<Email fullName={fullName} email={email} unsubscribeUrl={unsubscribeUrl} />);
+

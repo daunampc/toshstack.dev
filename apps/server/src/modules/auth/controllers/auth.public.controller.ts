@@ -45,11 +45,12 @@ export class AuthPublicController {
   @HttpCode(HttpStatus.OK)
   async userRegister(@Body() userRegisterDto: UserRegisterDto) {
     const createdUser = await this.userService.createUser(userRegisterDto);
+    if (createdUser) {
+      await this.mailerService.welcomeRegister(
+        createdUser.profile.display_name,
+        createdUser.email,
+      );
+    }
     return createdUser.toDto();
-  }
-
-  @Post('test-mail')
-  async testMail() {
-    return await this.mailerService.testRender();
   }
 }
