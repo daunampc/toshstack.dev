@@ -1,4 +1,4 @@
-import { EmailField, StringField } from '@/decorators/field.decorators';
+import { EmailField, StringField } from '@server/decorators/field.decorators';
 
 export class UserRegisterDto {
   @EmailField()

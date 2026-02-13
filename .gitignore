@@ -1,4 +1,6 @@
+.vscode
 /node_modules
+
 yarn.lock
 # debug
 npm-debug.log*

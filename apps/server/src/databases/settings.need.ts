@@ -1,5 +1,5 @@
-import { SettingDefinitionEntity } from '@/modules/settings/entities/setting-definition.entity';
-import { SettingDefinitionMeta } from '@/modules/settings/types/setting-definition.types';
+import { SettingDefinitionEntity } from '@server/modules/settings/entities/setting-definition.entity';
+import { SettingDefinitionMeta } from '@server/modules/settings/types/setting-definition.types';
 import { DataSource } from 'typeorm';
 
 export const DEFAULT_SETTING_DEFINITION: SettingDefinitionMeta[] = [

@@ -2,7 +2,7 @@ import {
   BooleanField,
   StringField,
   StringFieldOptional,
-} from '@/decorators/field.decorators';
+} from '@server/decorators/field.decorators';
 import { CountryEntity } from '../entities/country.entity';
 
 export class CountryDto {

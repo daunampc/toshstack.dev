@@ -1,4 +1,4 @@
-import { NumberField, StringField } from '@/decorators/field.decorators';
+import { NumberField, StringField } from '@server/decorators/field.decorators';
 
 export class TokenResponseDto {
   @StringField()

@@ -4,8 +4,8 @@ import { ProfileEntity } from './entities/profile.entity';
 import { Repository } from 'typeorm';
 import { UpdateProfileInput } from './types/profile.types';
 import { UploadService } from '../upload/upload.service';
-import { BadRequestAppException } from '@/exceptions/http.exception';
-import { ApiConfigService } from '@/shareds/services/api-config.service';
+import { BadRequestAppException } from '@server/exceptions/http.exception';
+import { ApiConfigService } from '@server/shareds/services/api-config.service';
 import { CountryEntity } from '../countries/entities/country.entity';
 import { CountriesService } from '../countries/countries.service';
 

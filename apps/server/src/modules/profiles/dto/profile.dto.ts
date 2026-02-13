@@ -2,9 +2,9 @@ import {
   ClassField,
   StringFieldOptional,
   TextAreaFieldOptional,
-} from '@/decorators/field.decorators';
+} from '@server/decorators/field.decorators';
 import { ProfileEntity } from '../entities/profile.entity';
-import { CountryDto } from '@/modules/countries/dto/country.dto';
+import { CountryDto } from '@server/modules/countries/dto/country.dto';
 
 export class ProfileDto {
   @StringFieldOptional({ nullable: true })

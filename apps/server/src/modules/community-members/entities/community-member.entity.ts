@@ -1,4 +1,4 @@
-import { CommunityEntity } from '@/modules/communities/entities/community.entity';
+import { CommunityEntity } from '@server/modules/communities/entities/community.entity';
 import {
   Column,
   CreateDateColumn,
@@ -11,8 +11,8 @@ import {
 } from 'typeorm';
 import { CommunitryMemberRole } from '../enums/community-member-role.enum';
 import { CommunityMemberStatus } from '../enums/community-member-status.enum';
-import { AbstractEntity } from '@/common/abstract.entity';
-import { UserEntity } from '@/modules/users/entities/user.entity';
+import { AbstractEntity } from '@server/common/abstract.entity';
+import { UserEntity } from '@server/modules/users/entities/user.entity';
 
 @Entity('community_members')
 @Index(['id'])

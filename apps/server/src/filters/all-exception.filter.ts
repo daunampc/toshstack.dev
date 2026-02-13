@@ -1,6 +1,6 @@
-import { normalizeValidationErrors } from '@/common/utils';
-import { AppException } from '@/exceptions/app.exception';
-import { ErrorCode, ErrorCodeType } from '@/exceptions/error-codes';
+import { normalizeValidationErrors } from '@server/common/utils';
+import { AppException } from '@server/exceptions/app.exception';
+import { ErrorCode, ErrorCodeType } from '@server/exceptions/error-codes';
 import {
   ArgumentsHost,
   Catch,

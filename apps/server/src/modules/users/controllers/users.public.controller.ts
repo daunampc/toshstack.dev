@@ -1,6 +1,6 @@
 import { Controller, Get, Param, UseGuards } from '@nestjs/common';
 import { UsersService } from '../users.service';
-import { AuthOptionalGuard } from '@/guards/auth-optional.guard';
+import { AuthOptionalGuard } from '@server/guards/auth-optional.guard';
 
 @Controller('users')
 @UseGuards(AuthOptionalGuard)

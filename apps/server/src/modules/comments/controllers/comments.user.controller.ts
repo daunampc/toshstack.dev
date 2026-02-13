@@ -6,10 +6,10 @@ import {
   Patch,
   Post,
 } from '@nestjs/common';
-import { CommentReactionsService } from '@/modules/comment-reactions/comment-reactions.service';
-import { AuthUser } from '@/decorators/auth-user.decorator';
-import { UserEntity } from '@/modules/users/entities/user.entity';
-import { Auth } from '@/decorators/http.decorator';
+import { CommentReactionsService } from '@server/modules/comment-reactions/comment-reactions.service';
+import { AuthUser } from '@server/decorators/auth-user.decorator';
+import { UserEntity } from '@server/modules/users/entities/user.entity';
+import { Auth } from '@server/decorators/http.decorator';
 import { ToggleReactionDto } from '../dto/toggle-reaction.dto';
 import { CreateCommentDto } from '../dto/create-comment.dto';
 import { CommentsService } from '../comments.service';

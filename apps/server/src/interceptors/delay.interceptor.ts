@@ -1,4 +1,4 @@
-import { DELAY_KEY } from '@/decorators/delay.decorators';
+import { DELAY_KEY } from '@server/decorators/delay.decorators';
 import {
   CallHandler,
   ExecutionContext,

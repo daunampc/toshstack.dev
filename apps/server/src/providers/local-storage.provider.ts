@@ -1,7 +1,7 @@
 import fs from 'fs';
 import { randomUUID } from 'crypto';
 
-import { StorageProvider } from '@/interfaces/storage.interface';
+import { StorageProvider } from '@server/interfaces/storage.interface';
 import { fileTypeFromBuffer } from 'file-type';
 
 export class LocalStorageProvider implements StorageProvider {

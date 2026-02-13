@@ -4,13 +4,13 @@ import {
   NumberField,
   StringField,
   StringFieldOptional,
-} from '@/decorators/field.decorators';
-import { UserDto } from '@/modules/users/dto/user.dto';
+} from '@server/decorators/field.decorators';
+import { UserDto } from '@server/modules/users/dto/user.dto';
 import { PostEntity } from '../entities/post.entity';
-import { CommentEntity } from '@/modules/comments/entities/comment.entity';
-import { CommunityEntity } from '@/modules/communities/entities/community.entity';
-import { SnowFlakeService } from '@/shareds/services/snowflake.service';
-import { PostReactionDto } from '@/modules/comments/dto/post-reaction.dto';
+import { CommentEntity } from '@server/modules/comments/entities/comment.entity';
+import { CommunityEntity } from '@server/modules/communities/entities/community.entity';
+import { SnowFlakeService } from '@server/shareds/services/snowflake.service';
+import { PostReactionDto } from '@server/modules/comments/dto/post-reaction.dto';
 export type PostDtoOptions = Partial<{
   author: UserDto;
   snowFlakeService: SnowFlakeService;

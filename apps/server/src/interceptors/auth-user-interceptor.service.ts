@@ -1,5 +1,5 @@
-import { UserEntity } from '@/modules/users/entities/user.entity';
-import { ContextProvider } from '@/providers/context.provider';
+import { UserEntity } from '@server/modules/users/entities/user.entity';
+import { ContextProvider } from '@server/providers/context.provider';
 import {
   CallHandler,
   ExecutionContext,

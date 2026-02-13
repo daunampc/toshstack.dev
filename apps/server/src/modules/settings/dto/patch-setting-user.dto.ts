@@ -1,6 +1,6 @@
 import { IsEnum, IsString } from 'class-validator';
 import { PrefixSetting } from '../enums/prefix-setting.enum';
-import { IsStringOrBoolean } from '@/validators/is-string-or-boolean';
+import { IsStringOrBoolean } from '@server/validators/is-string-or-boolean';
 
 export class PathParamSettingUserDto {
   @IsEnum(PrefixSetting)

@@ -1,4 +1,4 @@
-import { CommentEntity } from '@/modules/comments/entities/comment.entity';
+import { CommentEntity } from '@server/modules/comments/entities/comment.entity';
 import {
   Column,
   Entity,
@@ -10,7 +10,7 @@ import {
   Unique,
 } from 'typeorm';
 import { CommentReactionStatus } from '../enums/comment-reaction-status.enum';
-import { UserEntity } from '@/modules/users/entities/user.entity';
+import { UserEntity } from '@server/modules/users/entities/user.entity';
 
 @Entity('comment_reactions')
 @Unique(['comment_id', 'user_id'])

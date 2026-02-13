@@ -2,10 +2,10 @@ import { Controller, Get, Param, Query, UseGuards } from '@nestjs/common';
 import { PostsService } from '../posts.service';
 import { GetPostDto, GetPostUserDto } from '../dto/get-post.dto';
 import { GetDetailPostDto } from '../dto/detail-post.dto';
-import { AuthOptionalGuard } from '@/guards/auth-optional.guard';
-import { UserEntity } from '@/modules/users/entities/user.entity';
-import { AuthUser } from '@/decorators/auth-user.decorator';
-import { UsersService } from '@/modules/users/users.service';
+import { AuthOptionalGuard } from '@server/guards/auth-optional.guard';
+import { UserEntity } from '@server/modules/users/entities/user.entity';
+import { AuthUser } from '@server/decorators/auth-user.decorator';
+import { UsersService } from '@server/modules/users/users.service';
 
 @Controller('posts')
 @UseGuards(AuthOptionalGuard)

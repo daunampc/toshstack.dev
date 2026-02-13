@@ -1,5 +1,5 @@
-import { allowFileImages } from '@/config/allow-file.config';
-import { BadRequestAppException } from '@/exceptions/http.exception';
+import { allowFileImages } from '@server/config/allow-file.config';
+import { BadRequestAppException } from '@server/exceptions/http.exception';
 import { ArgumentMetadata, PipeTransform } from '@nestjs/common';
 import { fileTypeFromBuffer } from 'file-type';
 import sharp from 'sharp';

@@ -1,5 +1,5 @@
-import { AbstractEntity } from '@/common/abstract.entity';
-import { PostEntity } from '@/modules/posts/entities/post.entity';
+import { AbstractEntity } from '@server/common/abstract.entity';
+import { PostEntity } from '@server/modules/posts/entities/post.entity';
 import {
   Column,
   CreateDateColumn,
@@ -12,7 +12,7 @@ import {
   Unique,
 } from 'typeorm';
 import { PostReactionStatus } from '../enums/post-reaction-status.enum';
-import { UserEntity } from '@/modules/users/entities/user.entity';
+import { UserEntity } from '@server/modules/users/entities/user.entity';
 
 @Entity('post_reactions')
 @Index(['id'])

@@ -1,4 +1,4 @@
-import { UserEntity } from '@/modules/users/entities/user.entity';
+import { UserEntity } from '@server/modules/users/entities/user.entity';
 import { ExecutionContext } from '@nestjs/common';
 import { AuthGuard } from '@nestjs/passport';
 

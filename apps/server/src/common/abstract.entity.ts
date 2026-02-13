@@ -1,4 +1,4 @@
-import { Constructor } from '@/types';
+import { Constructor } from '@server/types';
 
 export abstract class AbstractEntity<DTO = never, O = never> {
   toDto(options?: O): DTO {

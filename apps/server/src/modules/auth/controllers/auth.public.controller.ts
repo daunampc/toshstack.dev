@@ -8,17 +8,19 @@ import {
 } from '@nestjs/common';
 import { UserLoginDto } from '../dto/user-login.dto';
 import { AuthService } from '../auth.service';
-import { RoleType } from '@/constants/role-type';
+import { RoleType } from '@server/constants/role-type';
 import { UserRegisterDto } from '../dto/user-register.dto';
 import { LoginResponseDto } from '../responses/login-response.dto';
 import type { Response } from 'express';
-import { UsersService } from '@/modules/users/users.service';
+import { UsersService } from '@server/modules/users/users.service';
+import { MailerService } from '@server/modules/mailer/mailer.service';
 
 @Controller('auth')
 export class AuthPublicController {
   constructor(
     private authService: AuthService,
     private userService: UsersService,
+    private mailerService: MailerService,
   ) {}
   @Post('login')
   @HttpCode(HttpStatus.OK)
@@ -44,5 +46,10 @@ export class AuthPublicController {
   async userRegister(@Body() userRegisterDto: UserRegisterDto) {
     const createdUser = await this.userService.createUser(userRegisterDto);
     return createdUser.toDto();
+  }
+
+  @Post('test-mail')
+  async testMail() {
+    return await this.mailerService.testRender();
   }
 }

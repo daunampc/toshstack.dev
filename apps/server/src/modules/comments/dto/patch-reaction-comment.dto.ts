@@ -1,5 +1,5 @@
-import { EnumField, StringField } from '@/decorators/field.decorators';
-import { CommentReactionStatus } from '@/modules/comment-reactions/enums/comment-reaction-status.enum';
+import { EnumField, StringField } from '@server/decorators/field.decorators';
+import { CommentReactionStatus } from '@server/modules/comment-reactions/enums/comment-reaction-status.enum';
 
 export class ToggleCommentReaction {
   @StringField()

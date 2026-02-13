@@ -1,6 +1,6 @@
-import { Roles } from '@/decorators/roles.decorators';
-import { RolesService } from '@/modules/roles/roles.service';
-import { UserEntity } from '@/modules/users/entities/user.entity';
+import { Roles } from '@server/decorators/roles.decorators';
+import { RolesService } from '@server/modules/roles/roles.service';
+import { UserEntity } from '@server/modules/users/entities/user.entity';
 import { CanActivate, ExecutionContext, Injectable } from '@nestjs/common';
 import { Reflector } from '@nestjs/core';
 

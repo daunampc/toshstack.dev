@@ -3,7 +3,7 @@ import { Repository } from 'typeorm';
 import { SiteSettingEntity } from './entites/site-setting.entity';
 import { InjectRepository } from '@nestjs/typeorm';
 import { SiteSettingType } from './enums/site-setting-type.enum';
-import { NotFoundAppException } from '@/exceptions/http.exception';
+import { NotFoundAppException } from '@server/exceptions/http.exception';
 
 @Injectable()
 export class SiteSettingsService {

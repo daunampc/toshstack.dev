@@ -1,12 +1,12 @@
-import { ApiConfigService } from '@/shareds/services/api-config.service';
+import { ApiConfigService } from '@server/shareds/services/api-config.service';
 import { Injectable } from '@nestjs/common';
 import { PassportStrategy } from '@nestjs/passport';
 import { Request } from 'express';
 import { ExtractJwt, Strategy } from 'passport-jwt';
 import { AccessTokenData } from '../types/token.types';
-import { UnauthorizedAppException } from '@/exceptions/http.exception';
-import { UsersService } from '@/modules/users/users.service';
-import { UserEntity } from '@/modules/users/entities/user.entity';
+import { UnauthorizedAppException } from '@server/exceptions/http.exception';
+import { UsersService } from '@server/modules/users/users.service';
+import { UserEntity } from '@server/modules/users/entities/user.entity';
 
 @Injectable()
 export class JwtStrategy extends PassportStrategy(Strategy, 'jwt') {

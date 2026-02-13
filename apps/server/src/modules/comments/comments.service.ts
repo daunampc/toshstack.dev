@@ -3,7 +3,7 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { CommentEntity } from './entities/comment.entity';
 import { Repository } from 'typeorm';
 import { GetCommentPostDto } from './dto/get-comment-post.dto';
-import { SnowFlakeService } from '@/shareds/services/snowflake.service';
+import { SnowFlakeService } from '@server/shareds/services/snowflake.service';
 import { CommentReactionStatus } from '../comment-reactions/enums/comment-reaction-status.enum';
 import {
   CommentReactionDislike,
@@ -11,7 +11,7 @@ import {
 } from './types/comment.types';
 import { CommentDto } from './dto/comment.dto';
 import { CreateCommentDto } from './dto/create-comment.dto';
-import { ConflictAppException } from '@/exceptions/http.exception';
+import { ConflictAppException } from '@server/exceptions/http.exception';
 import { CommentSortBy } from './enums/comment-sort-by.enum';
 
 @Injectable()

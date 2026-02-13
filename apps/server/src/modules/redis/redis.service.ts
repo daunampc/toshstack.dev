@@ -1,8 +1,8 @@
-import { ApiConfigService } from '@/shareds/services/api-config.service';
+import { ApiConfigService } from '@server/shareds/services/api-config.service';
 import { Injectable, OnModuleDestroy, OnModuleInit } from '@nestjs/common';
 import Redis from 'ioredis';
 import { createRedisClient } from './redis.client';
-import { AppLoggerService } from '@/shareds/services/app-logger.service';
+import { AppLoggerService } from '@server/shareds/services/app-logger.service';
 
 @Injectable()
 export class RedisService implements OnModuleInit, OnModuleDestroy {

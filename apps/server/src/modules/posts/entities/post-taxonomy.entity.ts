@@ -7,7 +7,7 @@ import {
   Unique,
 } from 'typeorm';
 import { PostEntity } from './post.entity';
-import { TaxonomyEntity } from '@/modules/taxonomy/entities/taxonomy.entity';
+import { TaxonomyEntity } from '@server/modules/taxonomy/entities/taxonomy.entity';
 
 @Entity('post_taxonomies')
 @Unique(['post'])

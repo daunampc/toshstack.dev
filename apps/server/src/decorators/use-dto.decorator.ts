@@ -1,4 +1,4 @@
-import { Constructor } from '@/types';
+import { Constructor } from '@server/types';
 
 export function UseDto(dtoClass: Constructor): ClassDecorator {
   return (ctor) => {

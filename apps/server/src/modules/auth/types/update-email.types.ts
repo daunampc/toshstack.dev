@@ -1,4 +1,4 @@
-import { UserEntity } from '@/modules/users/entities/user.entity';
+import { UserEntity } from '@server/modules/users/entities/user.entity';
 import { UpdateEmailDto } from '../dto/update-email.dto';
 
 export interface UpdateEmailInput {

@@ -5,16 +5,16 @@ import { DataSource, Repository } from 'typeorm';
 import { CreatePostDto } from './dto/create-post.dto';
 import { UploadService } from '../upload/upload.service';
 import { CommunityEntity } from '../communities/entities/community.entity';
-import { SnowFlakeService } from '@/shareds/services/snowflake.service';
-import { ApiConfigService } from '@/shareds/services/api-config.service';
+import { SnowFlakeService } from '@server/shareds/services/snowflake.service';
+import { ApiConfigService } from '@server/shareds/services/api-config.service';
 import { TaxonomyEntity } from '../taxonomy/entities/taxonomy.entity';
 import { PostTaxonomyEntity } from './entities/post-taxonomy.entity';
 import {
   BadRequestAppException,
   NotFoundAppException,
-} from '@/exceptions/http.exception';
-import { createSlug } from '@/common/slugify.util';
-import { generateRandomId } from '@/common/utils';
+} from '@server/exceptions/http.exception';
+import { createSlug } from '@server/common/slugify.util';
+import { generateRandomId } from '@server/common/utils';
 import { GetPostDto } from './dto/get-post.dto';
 import { PostDto } from './dto/post.dto';
 import { UsersService } from '../users/users.service';

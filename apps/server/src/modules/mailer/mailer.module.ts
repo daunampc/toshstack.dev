@@ -1,7 +1,7 @@
 import { Global, Module } from '@nestjs/common';
 import { MailerModule as MailerModuleFS } from '@nestjs-modules/mailer';
 import { MailerService } from './mailer.service';
-import { ApiConfigService } from '@/shareds/services/api-config.service';
+import { ApiConfigService } from '@server/shareds/services/api-config.service';
 import { HandlebarsAdapter } from '@nestjs-modules/mailer/dist/adapters/handlebars.adapter';
 import { join } from 'path';
 

@@ -1,6 +1,6 @@
-import { ClassField } from '@/decorators/field.decorators';
+import { ClassField } from '@server/decorators/field.decorators';
 import { TokenResponseDto } from './token-response.dto';
-import { UserDto } from '@/modules/users/dto/user.dto';
+import { UserDto } from '@server/modules/users/dto/user.dto';
 
 export class LoginResponseDto {
   @ClassField(() => TokenResponseDto)

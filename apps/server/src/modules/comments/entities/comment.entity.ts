@@ -1,7 +1,7 @@
-import { AbstractEntity } from '@/common/abstract.entity';
-import { CommentReactionEntity } from '@/modules/comment-reactions/entities/comment-reaction.entity';
-import { PostEntity } from '@/modules/posts/entities/post.entity';
-import { UserEntity } from '@/modules/users/entities/user.entity';
+import { AbstractEntity } from '@server/common/abstract.entity';
+import { CommentReactionEntity } from '@server/modules/comment-reactions/entities/comment-reaction.entity';
+import { PostEntity } from '@server/modules/posts/entities/post.entity';
+import { UserEntity } from '@server/modules/users/entities/user.entity';
 import {
   Column,
   CreateDateColumn,

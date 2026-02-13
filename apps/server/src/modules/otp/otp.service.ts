@@ -1,6 +1,6 @@
 import { Inject, Injectable } from '@nestjs/common';
 import { CacheService, RedisService } from '../redis';
-import { OTP_OPTIONS } from '@/constants/otp.constants';
+import { OTP_OPTIONS } from '@server/constants/otp.constants';
 import type {
   CreateOtpInput,
   CreateOtpResult,
@@ -10,14 +10,14 @@ import type {
   VerifyOtpInput,
   VerifyOtpResult,
 } from './types/otp.types';
-import { ConflictAppException } from '@/exceptions/http.exception';
+import { ConflictAppException } from '@server/exceptions/http.exception';
 import {
   generateOtpCode,
   hmacSha256Hex,
   makeSalt,
   safeEqualHex,
   stableBindString,
-} from '@/common/otp.util';
+} from '@server/common/otp.util';
 
 @Injectable()
 export class OtpService {

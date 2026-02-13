@@ -1,5 +1,5 @@
-import { CommunityEntity } from '@/modules/communities/entities/community.entity';
-import { UserEntity } from '@/modules/users/entities/user.entity';
+import { CommunityEntity } from '@server/modules/communities/entities/community.entity';
+import { UserEntity } from '@server/modules/users/entities/user.entity';
 import {
   Column,
   CreateDateColumn,

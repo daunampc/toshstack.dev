@@ -6,8 +6,7 @@ import { UserRegisterDto } from '../auth/dto/user-register.dto';
 import {
   ConflictAppException,
   NotFoundAppException,
-} from '@/exceptions/http.exception';
-import { hashPassword } from '@/common/utils';
+} from '@server//exceptions/http.exception';
 import { MailerService } from '../mailer/mailer.service';
 import { RoleEntity } from '../roles/entities/role.entity';
 import { UserRoleEntity } from '../roles/entities/user-role.entity';
@@ -15,7 +14,7 @@ import { WalletStatus } from '../wallets/enums/wallet-status.enum';
 import { WalletCurrent } from '../wallets/enums/wallet-current.enum';
 import { FollowsService } from '../follows/follows.service';
 import { UserFollowDto } from '../follows/dto/user-follow.dto';
-
+import { hashPassword } from '@server//common/utils';
 @Injectable()
 export class UsersService {
   constructor(

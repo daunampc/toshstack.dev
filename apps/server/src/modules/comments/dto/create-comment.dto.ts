@@ -1,7 +1,7 @@
 import {
   StringField,
   StringFieldOptional,
-} from '@/decorators/field.decorators';
+} from '@server/decorators/field.decorators';
 
 export class CreateCommentDto {
   @StringFieldOptional()

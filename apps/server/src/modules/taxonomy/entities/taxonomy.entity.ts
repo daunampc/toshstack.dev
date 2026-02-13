@@ -1,4 +1,4 @@
-import { AbstractEntity } from '@/common/abstract.entity';
+import { AbstractEntity } from '@server/common/abstract.entity';
 import {
   Column,
   Entity,
@@ -11,7 +11,7 @@ import {
 } from 'typeorm';
 import { TaxonomyType } from '../enums/taxonomy-type.enum';
 import { TaxonomyScope } from '../enums/taxonomy-scope.enum';
-import { CommunityEntity } from '@/modules/communities/entities/community.entity';
+import { CommunityEntity } from '@server/modules/communities/entities/community.entity';
 
 @Entity('taxonomies')
 @Index(['id'])

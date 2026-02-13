@@ -1,5 +1,5 @@
-import { AbstractEntity } from '@/common/abstract.entity';
-import { UserEntity } from '@/modules/users/entities/user.entity';
+import { AbstractEntity } from '@server/common/abstract.entity';
+import { UserEntity } from '@server/modules/users/entities/user.entity';
 import {
   Column,
   CreateDateColumn,
@@ -10,7 +10,7 @@ import {
   PrimaryGeneratedColumn,
 } from 'typeorm';
 import { UserFollowDto } from '../dto/user-follow.dto';
-import { UseDto } from '@/decorators/use-dto.decorator';
+import { UseDto } from '@server/decorators/use-dto.decorator';
 
 @Entity('user_follows')
 @UseDto(UserFollowDto)

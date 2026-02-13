@@ -1,4 +1,4 @@
-import { ClassField } from '@/decorators/field.decorators';
+import { ClassField } from '@server/decorators/field.decorators';
 import { FollowerDto } from './follower.dto';
 import { FollowingDto } from './following.dto';
 

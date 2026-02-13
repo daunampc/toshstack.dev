@@ -2,7 +2,7 @@ import { forwardRef, Module } from '@nestjs/common';
 import { AuthService } from './auth.service';
 import { PassportModule } from '@nestjs/passport';
 import { JwtModule } from '@nestjs/jwt';
-import { ApiConfigService } from '@/shareds/services/api-config.service';
+import { ApiConfigService } from '@server/shareds/services/api-config.service';
 import { JwtStrategy } from './strategies/jwt.strategy';
 import { PublicStrategy } from './strategies/public.strategy';
 import { UsersModule } from '../users/users.module';

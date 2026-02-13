@@ -2,7 +2,7 @@ import {
   BooleanFieldOptional,
   EmailField,
   StringField,
-} from '@/decorators/field.decorators';
+} from '@server/decorators/field.decorators';
 
 export class UserLoginDto {
   @EmailField()

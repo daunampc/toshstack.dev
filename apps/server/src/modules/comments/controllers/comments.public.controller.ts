@@ -1,9 +1,9 @@
 import { Controller, Get, Query, UseGuards } from '@nestjs/common';
 import { CommentsService } from '../comments.service';
 import { GetCommentPostDto } from '../dto/get-comment-post.dto';
-import { AuthOptionalGuard } from '@/guards/auth-optional.guard';
-import { AuthUser } from '@/decorators/auth-user.decorator';
-import { UserEntity } from '@/modules/users/entities/user.entity';
+import { AuthOptionalGuard } from '@server/guards/auth-optional.guard';
+import { AuthUser } from '@server/decorators/auth-user.decorator';
+import { UserEntity } from '@server/modules/users/entities/user.entity';
 
 @Controller('comments')
 @UseGuards(AuthOptionalGuard)

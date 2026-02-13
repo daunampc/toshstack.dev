@@ -1,4 +1,4 @@
-import { ClassField } from '@/decorators/field.decorators';
+import { ClassField } from '@server/decorators/field.decorators';
 import { PageMetaDto } from './page-meta.dto';
 
 export class PageDto<T> {

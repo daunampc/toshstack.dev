@@ -1,4 +1,4 @@
-import { AbstractEntity } from '@/common/abstract.entity';
+import { AbstractEntity } from '@server/common/abstract.entity';
 import {
   Column,
   CreateDateColumn,
@@ -15,12 +15,12 @@ import {
 } from 'typeorm';
 import { PostStatus } from '../enums/post-status.enum';
 import { PostVisibility } from '../enums/post-visibility.enum';
-import { CommunityEntity } from '@/modules/communities/entities/community.entity';
-import { PostReactionEntity } from '@/modules/post-reactions/entities/post-reaction.entity';
-import { CommentEntity } from '@/modules/comments/entities/comment.entity';
-import { UserEntity } from '@/modules/users/entities/user.entity';
+import { CommunityEntity } from '@server/modules/communities/entities/community.entity';
+import { PostReactionEntity } from '@server/modules/post-reactions/entities/post-reaction.entity';
+import { CommentEntity } from '@server/modules/comments/entities/comment.entity';
+import { UserEntity } from '@server/modules/users/entities/user.entity';
 import { PostDto, PostDtoOptions } from '../dto/post.dto';
-import { UseDto } from '@/decorators/use-dto.decorator';
+import { UseDto } from '@server/decorators/use-dto.decorator';
 import { PostTaxonomyEntity } from './post-taxonomy.entity';
 
 @Entity('posts')

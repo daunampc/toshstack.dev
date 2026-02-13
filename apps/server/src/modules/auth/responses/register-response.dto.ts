@@ -1,5 +1,5 @@
-import { EmailField } from '@/decorators/field.decorators';
-import { UserDto } from '@/modules/users/dto/user.dto';
+import { EmailField } from '@server/decorators/field.decorators';
+import { UserDto } from '@server/modules/users/dto/user.dto';
 
 export class RegisterResponseDto {
   @EmailField()

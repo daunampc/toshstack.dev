@@ -3,7 +3,7 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { PostReactionEntity } from './entities/post-reaction.entity';
 import { Repository } from 'typeorm';
 import { CreatePostReactionDto } from '../posts/dto/create-post-reaction.dto';
-import { SnowFlakeService } from '@/shareds/services/snowflake.service';
+import { SnowFlakeService } from '@server/shareds/services/snowflake.service';
 
 @Injectable()
 export class PostReactionsService {

@@ -2,7 +2,7 @@ import {
   EnumFieldOptional,
   StringFieldOptional,
   TextAreaFieldOptional,
-} from '@/decorators/field.decorators';
+} from '@server/decorators/field.decorators';
 import { ProfileGender } from '../enums/profile-gender.enum';
 
 export class UpdateProfileDto {

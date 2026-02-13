@@ -1,10 +1,10 @@
-import { Auth } from '@/decorators/http.decorator';
+import { Auth } from '@server/decorators/http.decorator';
 import { Body, Controller, Get, Param, Patch } from '@nestjs/common';
 import { SettingsService } from '../settings.service';
 import { GetSettingUserDto } from '../dto/get-setting-user.dto';
 import { PatchsettingDto } from '../dto/patch-setting-user.dto';
-import { AuthUser } from '@/decorators/auth-user.decorator';
-import { UserEntity } from '@/modules/users/entities/user.entity';
+import { AuthUser } from '@server/decorators/auth-user.decorator';
+import { UserEntity } from '@server/modules/users/entities/user.entity';
 
 @Controller('settings/user')
 @Auth('member')

@@ -9,15 +9,15 @@ import {
   UseInterceptors,
 } from '@nestjs/common';
 import { CreatePostDto } from '../dto/create-post.dto';
-import { Auth } from '@/decorators/http.decorator';
+import { Auth } from '@server/decorators/http.decorator';
 import { FileInterceptor } from '@nestjs/platform-express';
 import { PostsService } from '../posts.service';
-import { SecureFilePipe } from '@/modules/upload/pipes/secure-file.pipe';
-import { FileValidationPipe } from '@/modules/upload/pipes/file-validation.pipe';
-import { AuthUser } from '@/decorators/auth-user.decorator';
-import { UserEntity } from '@/modules/users/entities/user.entity';
+import { SecureFilePipe } from '@server/modules/upload/pipes/secure-file.pipe';
+import { FileValidationPipe } from '@server/modules/upload/pipes/file-validation.pipe';
+import { AuthUser } from '@server/decorators/auth-user.decorator';
+import { UserEntity } from '@server/modules/users/entities/user.entity';
 import { CreatePostReactionDto } from '../dto/create-post-reaction.dto';
-import { PostReactionsService } from '@/modules/post-reactions/post-reactions.service';
+import { PostReactionsService } from '@server/modules/post-reactions/post-reactions.service';
 
 @Controller('posts')
 @Auth('member')

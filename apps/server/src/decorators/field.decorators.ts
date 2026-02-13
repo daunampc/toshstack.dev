@@ -25,7 +25,7 @@ import {
   Trim,
 } from './transform.decorator';
 import { IsNullable, IsUndefinable } from './validatior.decorator';
-import { Constructor } from '@/types';
+import { Constructor } from '@server/types';
 
 interface IBooleanFieldOptions {
   each?: boolean;

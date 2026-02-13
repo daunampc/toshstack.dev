@@ -1,7 +1,7 @@
 import {
   BooleanFieldOptional,
   NumberFieldOptional,
-} from '@/decorators/field.decorators';
+} from '@server/decorators/field.decorators';
 
 export class FollowerDto {
   @BooleanFieldOptional()

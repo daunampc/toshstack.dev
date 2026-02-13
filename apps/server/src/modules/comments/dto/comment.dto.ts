@@ -4,11 +4,11 @@ import {
   DateField,
   NumberFieldOptional,
   StringField,
-} from '@/decorators/field.decorators';
+} from '@server/decorators/field.decorators';
 import { CommentReactionDto } from './comment-reaction.dto';
 import { CommentEntity } from '../entities/comment.entity';
-import { UserDto } from '@/modules/users/dto/user.dto';
-import { SnowFlakeService } from '@/shareds/services/snowflake.service';
+import { UserDto } from '@server/modules/users/dto/user.dto';
+import { SnowFlakeService } from '@server/shareds/services/snowflake.service';
 
 export class CommentDto {
   @StringField()

@@ -1,6 +1,6 @@
-import { EmailField } from '@/decorators/field.decorators';
-import { UserFollowDto } from '@/modules/follows/dto/user-follow.dto';
-import { UserEntity } from '@/modules/users/entities/user.entity';
+import { EmailField } from '@server/decorators/field.decorators';
+import { UserFollowDto } from '@server/modules/follows/dto/user-follow.dto';
+import { UserEntity } from '@server/modules/users/entities/user.entity';
 
 export class MeResponseDto {
   @EmailField()

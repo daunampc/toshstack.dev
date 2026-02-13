@@ -1,4 +1,4 @@
-import { Auth } from '@/decorators/http.decorator';
+import { Auth } from '@server/decorators/http.decorator';
 import {
   Body,
   Controller,
@@ -11,12 +11,12 @@ import {
 } from '@nestjs/common';
 import { UpdateProfileDto } from '../dto/update-profile.dto';
 import { UpdateProfileResponseDto } from '../responses/update-profile-response.dto';
-import { AuthUser } from '@/decorators/auth-user.decorator';
-import { UserEntity } from '@/modules/users/entities/user.entity';
+import { AuthUser } from '@server/decorators/auth-user.decorator';
+import { UserEntity } from '@server/modules/users/entities/user.entity';
 import { ProfilesService } from '../profiles.service';
 import { FileInterceptor } from '@nestjs/platform-express';
-import { SecureFilePipe } from '@/modules/upload/pipes/secure-file.pipe';
-import { FileValidationPipe } from '@/modules/upload/pipes/file-validation.pipe';
+import { SecureFilePipe } from '@server/modules/upload/pipes/secure-file.pipe';
+import { FileValidationPipe } from '@server/modules/upload/pipes/file-validation.pipe';
 @Controller('profiles')
 @Auth('member')
 export class ProfilesUserController {

@@ -1,8 +1,8 @@
-import { PageOptionsDto } from '@/common/dto/page-options.dto';
+import { PageOptionsDto } from '@server/common/dto/page-options.dto';
 import {
   StringField,
   StringFieldOptional,
-} from '@/decorators/field.decorators';
+} from '@server/decorators/field.decorators';
 
 export class GetPostDto extends PageOptionsDto {
   @StringFieldOptional()

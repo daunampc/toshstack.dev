@@ -1,6 +1,6 @@
-import { AuthUser } from '@/decorators/auth-user.decorator';
-import { Auth } from '@/decorators/http.decorator';
-import { UserEntity } from '@/modules/users/entities/user.entity';
+import { AuthUser } from '@server/decorators/auth-user.decorator';
+import { Auth } from '@server/decorators/http.decorator';
+import { UserEntity } from '@server/modules/users/entities/user.entity';
 import {
   Body,
   Controller,
@@ -17,7 +17,7 @@ import type { Request, Response } from 'express';
 import { VerifyPasswordDto } from '../dto/verify-password.dto';
 import { UpdateEmailDto } from '../dto/update-email.dto';
 import { UpdateEmailResponseDto } from '../responses/update-email-response.dto';
-import { UsersService } from '@/modules/users/users.service';
+import { UsersService } from '@server/modules/users/users.service';
 import { MeResponseDto } from '../responses/me-response.dto';
 
 @Controller('auth')

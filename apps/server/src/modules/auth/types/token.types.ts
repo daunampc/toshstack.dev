@@ -1,4 +1,4 @@
-import { RoleType } from '@/constants/role-type';
+import { RoleType } from '@server/constants/role-type';
 
 export interface AccessTokenData {
   role: RoleType;

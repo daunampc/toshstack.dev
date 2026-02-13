@@ -1,4 +1,4 @@
-import { BooleanField, NumberField } from '@/decorators/field.decorators';
+import { BooleanField, NumberField } from '@server/decorators/field.decorators';
 import { PageOptionsDto } from './page-options.dto';
 
 interface PageMetaDtoParameters {

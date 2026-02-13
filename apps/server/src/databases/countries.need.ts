@@ -1,5 +1,5 @@
-import { CountryEntity } from '@/modules/countries/entities/country.entity';
-import { CurrencyCountry } from '@/modules/countries/enums/currency.enum';
+import { CountryEntity } from '@server/modules/countries/entities/country.entity';
+import { CurrencyCountry } from '@server/modules/countries/enums/currency.enum';
 import { DataSource } from 'typeorm';
 
 export const COUNTRIES_SEED = [

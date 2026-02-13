@@ -1,4 +1,4 @@
-import { AbstractEntity } from '@/common/abstract.entity';
+import { AbstractEntity } from '@server/common/abstract.entity';
 import {
   Column,
   CreateDateColumn,
@@ -11,13 +11,13 @@ import {
   UpdateDateColumn,
 } from 'typeorm';
 import { UserDto, UserDtoOptions } from '../dto/user.dto';
-import { PostReactionEntity } from '@/modules/post-reactions/entities/post-reaction.entity';
-import { CommentReactionEntity } from '@/modules/comment-reactions/entities/comment-reaction.entity';
-import { UseDto } from '@/decorators/use-dto.decorator';
-import { UserRoleEntity } from '@/modules/roles/entities/user-role.entity';
-import { ProfileEntity } from '@/modules/profiles/entities/profile.entity';
-import { WalletEntity } from '@/modules/wallets/entities/wallet.entity';
-import { UserSettingEntity } from '@/modules/settings/entities/user-setting.entity';
+import { PostReactionEntity } from '@server/modules/post-reactions/entities/post-reaction.entity';
+import { CommentReactionEntity } from '@server/modules/comment-reactions/entities/comment-reaction.entity';
+import { UseDto } from '@server/decorators/use-dto.decorator';
+import { UserRoleEntity } from '@server/modules/roles/entities/user-role.entity';
+import { ProfileEntity } from '@server/modules/profiles/entities/profile.entity';
+import { WalletEntity } from '@server/modules/wallets/entities/wallet.entity';
+import { UserSettingEntity } from '@server/modules/settings/entities/user-setting.entity';
 
 @Entity('users')
 @UseDto(UserDto)

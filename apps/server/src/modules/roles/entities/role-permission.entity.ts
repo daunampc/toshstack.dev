@@ -1,6 +1,6 @@
 import { Entity, ManyToOne, PrimaryGeneratedColumn, Unique } from 'typeorm';
 import { RoleEntity } from './role.entity';
-import { PermissionEntity } from '@/modules/permissions/entities/permission.entity';
+import { PermissionEntity } from '@server/modules/permissions/entities/permission.entity';
 
 @Entity('role_permissions')
 @Unique(['role', 'permission'])

@@ -1,5 +1,8 @@
-import { PageOptionsDto } from '@/common/dto/page-options.dto';
-import { EnumFieldOptional, StringField } from '@/decorators/field.decorators';
+import { PageOptionsDto } from '@server/common/dto/page-options.dto';
+import {
+  EnumFieldOptional,
+  StringField,
+} from '@server/decorators/field.decorators';
 import { CommentSortBy } from '../enums/comment-sort-by.enum';
 
 export class GetCommentPostDto extends PageOptionsDto {

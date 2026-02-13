@@ -1,6 +1,6 @@
 import { Global, Module } from '@nestjs/common';
 import { RedisService } from './redis.service';
-import { AppLoggerService } from '@/shareds/services/app-logger.service';
+import { AppLoggerService } from '@server/shareds/services/app-logger.service';
 import { CacheService } from './cache.service';
 
 @Global()

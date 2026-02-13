@@ -1,6 +1,6 @@
 import { Injectable, PipeTransform } from '@nestjs/common';
 import type { FileValidationOptions } from '../types/file.types';
-import { BadRequestAppException } from '@/exceptions/http.exception';
+import { BadRequestAppException } from '@server/exceptions/http.exception';
 
 @Injectable()
 export class FileValidationPipe implements PipeTransform {

@@ -3,9 +3,9 @@ import {
   DateFieldOptional,
   NumberFieldOptional,
   StringField,
-} from '@/decorators/field.decorators';
-import { ProfileDto } from '@/modules/profiles/dto/profile.dto';
-import { UserFollowDto } from '@/modules/follows/dto/user-follow.dto';
+} from '@server/decorators/field.decorators';
+import { ProfileDto } from '@server/modules/profiles/dto/profile.dto';
+import { UserFollowDto } from '@server/modules/follows/dto/user-follow.dto';
 import { UserEntity } from '../entities/user.entity';
 
 export type UserDtoOptions = Partial<{

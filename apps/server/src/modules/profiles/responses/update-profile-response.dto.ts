@@ -1,4 +1,4 @@
-import { StringField } from '@/decorators/field.decorators';
+import { StringField } from '@server/decorators/field.decorators';
 
 export class UpdateProfileResponseDto {
   @StringField()

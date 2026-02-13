@@ -1,6 +1,6 @@
 import { Global, Module } from '@nestjs/common';
 import { UploadService } from './upload.service';
-import { LocalStorageProvider } from '@/providers/local-storage.provider';
+import { LocalStorageProvider } from '@server/providers/local-storage.provider';
 import { STORAGE_PROVIDER } from './constants/upload.constant';
 
 @Global()

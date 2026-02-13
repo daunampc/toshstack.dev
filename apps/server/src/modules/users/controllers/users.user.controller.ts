@@ -1,4 +1,4 @@
-import { Auth } from '@/decorators/http.decorator';
+import { Auth } from '@server/decorators/http.decorator';
 import { Controller } from '@nestjs/common';
 
 @Controller('users')

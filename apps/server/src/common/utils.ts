@@ -1,4 +1,4 @@
-import { argon2Config } from '@/config/argon2.config';
+import { argon2Config } from '@server/config/argon2.config';
 import { randomBytes } from 'crypto';
 
 import * as argon2 from 'argon2';

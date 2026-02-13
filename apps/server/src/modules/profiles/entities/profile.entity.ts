@@ -1,4 +1,4 @@
-import { AbstractEntity } from '@/common/abstract.entity';
+import { AbstractEntity } from '@server/common/abstract.entity';
 import {
   Column,
   CreateDateColumn,
@@ -13,9 +13,9 @@ import {
 } from 'typeorm';
 import { ProfileGender } from '../enums/profile-gender.enum';
 import { ProfileDto } from '../dto/profile.dto';
-import { UserEntity } from '@/modules/users/entities/user.entity';
-import { CountryEntity } from '@/modules/countries/entities/country.entity';
-import { UseDto } from '@/decorators/use-dto.decorator';
+import { UserEntity } from '@server/modules/users/entities/user.entity';
+import { CountryEntity } from '@server/modules/countries/entities/country.entity';
+import { UseDto } from '@server/decorators/use-dto.decorator';
 
 @Entity('profiles')
 @UseDto(ProfileDto)

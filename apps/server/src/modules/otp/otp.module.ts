@@ -1,7 +1,7 @@
 import { DynamicModule, Global, Module } from '@nestjs/common';
 import { OtpService } from './otp.service';
 import { OtpModuleOptions } from './types/otp.types';
-import { OTP_OPTIONS } from '@/constants/otp.constants';
+import { OTP_OPTIONS } from '@server/constants/otp.constants';
 
 @Global()
 @Module({})

@@ -1,6 +1,6 @@
 import { Injectable, Logger } from '@nestjs/common';
 
-import type { IAppLogger } from '@/interfaces/app-logger.interface';
+import type { IAppLogger } from '@server/interfaces/app-logger.interface';
 
 @Injectable()
 export class AppLoggerService implements IAppLogger {

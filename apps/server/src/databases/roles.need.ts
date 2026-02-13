@@ -1,4 +1,4 @@
-import { RoleEntity } from '@/modules/roles/entities/role.entity';
+import { RoleEntity } from '@server/modules/roles/entities/role.entity';
 import { DataSource } from 'typeorm';
 
 export const DEFAULT_ROLES = [
