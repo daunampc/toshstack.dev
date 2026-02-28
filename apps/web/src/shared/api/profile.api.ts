@@ -1,6 +1,6 @@
-import axiosClient from '@/shared/api/http';
-import { User } from '../model';
-import { handleApiError } from '@/shared/lib/api/handle-api-error';
+import { User } from '@/entities/user/model';
+import axiosClient from './http';
+import { handleApiError } from '../lib/api/handle-api-error';
 
 export const getUserProfile = async (handle: string): Promise<User | null> => {
   try {

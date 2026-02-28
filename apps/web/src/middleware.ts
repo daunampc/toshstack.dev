@@ -15,7 +15,6 @@ export async function middleware(req: NextRequest) {
   const protectedRoutes = ['/settings', '/user/create-post'];
   const isProtected = protectedRoutes.some((route) => pathname.startsWith(`${route}`));
   const loginUrl = new URL('/auth/login', req.url);
-  console.log('OOK');
   if (token && authRoutes.includes(pathname)) {
     const isValid = await verifyToken(token);
     if (isValid) {

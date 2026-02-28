@@ -1,12 +1,12 @@
 'use client';
 import { BsFillPostcardHeartFill } from 'react-icons/bs';
-import { useUserProfileQuery } from '@/entities/user/api';
 import { formatIsoToDdMonYyyy } from '@/shared/lib/format-date';
 import { FaStar, FaUserCheck, FaUserPlus } from 'react-icons/fa';
 import { IoCreate } from 'react-icons/io5';
+import { useProfileQuery } from '@/features/user/profile/model';
 
 export default function UserStats(params: { handle: string }) {
-  const { data } = useUserProfileQuery(params.handle);
+  const { data } = useProfileQuery(params.handle);
   if (!data) return null;
   const { created_at, user_follow } = data;
   return (

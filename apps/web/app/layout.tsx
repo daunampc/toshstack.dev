@@ -1,5 +1,6 @@
 import { NextIntlClientProvider } from 'next-intl';
 import './globals.css';
+import '@mantine/dates/styles.css';
 import { Toaster } from 'sonner';
 import { ColorSchemeScript, mantineHtmlProps, MantineProvider } from '@mantine/core';
 import { themeConfig } from '@/shared/config/theme-config';

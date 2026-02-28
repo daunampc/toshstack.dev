@@ -29,6 +29,7 @@ async function bootstrap() {
       cors: {
         origin: process.env.CORS_ORIGINS?.split(',') || [
           'http://localhost:3000',
+          'http://192.168.101.169:3000',
         ],
         methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
         credentials: true,

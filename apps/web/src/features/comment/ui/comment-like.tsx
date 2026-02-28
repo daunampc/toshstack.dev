@@ -125,8 +125,6 @@ const ReactionButton = ({
   );
 };
 export function CommentLike({ comment }: CommentLikeProps) {
-  const queryClient = useQueryClient();
-
   const { mutate, isPending } = useToggleCommentReaction();
   const [reaction, setReaction] = useState({
     LIKE: comment.like,

@@ -4,11 +4,11 @@ import { ActionIcon, Avatar } from '@mantine/core';
 import Image from 'next/image';
 import { RiLink } from 'react-icons/ri';
 import { FaFacebookSquare, FaGithubSquare, FaYoutubeSquare } from 'react-icons/fa';
-import { useUserProfileQuery } from '../../api';
 import { useParams } from 'next/navigation';
-export function UserDetailed() {
+import { useProfileQuery } from '../model';
+export function UserDetail() {
   const params = useParams<{ handle: string }>();
-  const { data: user } = useUserProfileQuery(params?.handle ?? '');
+  const { data: user } = useProfileQuery(params?.handle ?? '');
   if (!user) return null;
   return (
     <div className="w-full relative">

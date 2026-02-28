@@ -1,7 +1,11 @@
 import Link from '@tiptap/extension-link';
 import Subscript from '@tiptap/extension-subscript';
 import Bold from '@tiptap/extension-bold';
-import { Placeholder, UndoRedo } from '@tiptap/extensions';
+import Strike from '@tiptap/extension-strike';
+import Italic from '@tiptap/extension-italic';
+import Image from '@tiptap/extension-image';
+
+import { Dropcursor, Placeholder, UndoRedo } from '@tiptap/extensions';
 import Code from '@tiptap/extension-code';
 import { Plugin } from '@tiptap/pm/state';
 import Superscript from '@tiptap/extension-superscript';
@@ -15,7 +19,9 @@ import type { Extensions } from '@tiptap/core';
 import Highlight from '@tiptap/extension-highlight';
 import Heading from '@tiptap/extension-heading';
 import BlockQuote from '@tiptap/extension-blockquote';
-import ListItem from '@tiptap/extension-list-item';
+
+import { ListItem, OrderedList } from '@tiptap/extension-list';
+
 import BulletList from '@tiptap/extension-bullet-list';
 
 import { common, createLowlight } from 'lowlight';
@@ -94,21 +100,24 @@ export const tiptapExtensions: Extensions = [
   Document,
   CustomParagraph,
   Text,
-
   CustomHeading,
   BlockQuote,
   Link,
   Bold,
+  Italic,
+  Strike,
   Code,
   Superscript,
   Subscript,
   Highlight,
   ListItem,
   BulletList,
+  OrderedList,
+  Image,
+  Dropcursor,
   TextAlign.configure({ types: ['heading', 'paragraph'] }),
-  Placeholder.configure({
-    placeholder: 'Write your article content here.....',
-  }),
+  Placeholder,
   CodeBlockHighlight,
+
   UndoRedo,
 ];

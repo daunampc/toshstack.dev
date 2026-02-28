@@ -176,11 +176,15 @@
   :first-child {
     margin-top: 0;
   }
-
+  ul li {
+    list-style: outside;
+  }
+  ol li {
+    list-style: decimal;
+  }
   ul,
   ol {
     padding: 0 1rem;
-    list-style: outside;
     margin: 1.25rem 1rem 1.25rem 0.4rem;
 
     li p {
@@ -200,7 +204,7 @@
   }
 
   p.is-editor-empty:first-child::before {
-    color: #656565;
+    color: #c2c2c2;
     content: attr(data-placeholder);
     float: left;
     height: 0;
@@ -274,7 +278,9 @@
     margin: var(--mantine-spacing-md) 0;
   }
 
-  .code-wrapper pre {
+  .code-wrapper pre,
+  pre,
+  code {
     padding: 12px 14px;
     line-height: 0;
     white-space: pre;
@@ -285,7 +291,8 @@
     border-radius: var(--mantine-radius-md);
     font-size: var(--mantine-font-size-sm);
   }
-  .code-wrapper pre code {
+  .code-wrapper pre code,
+  pre code {
     padding: 0;
     line-height: 1.5;
     font-weight: 500;

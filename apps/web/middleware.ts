@@ -47,7 +47,6 @@ async function verifyToken(token: string) {
         Cookie: `__Host_sess=${token}`,
       },
     });
-    console.log('Check auth login: ', res.ok);
     return res.ok;
   } catch {
     return false;

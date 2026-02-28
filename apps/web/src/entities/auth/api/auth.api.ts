@@ -20,6 +20,7 @@ export const authLogin = async (payload: LoginPayload): Promise<LoginApiResult> 
     const res = await axiosClient.post<LoginApiResult>('/auth/login', payload);
     return res.data;
   } catch (error) {
+    console.log(error);
     return handleApiError(error);
   }
 };

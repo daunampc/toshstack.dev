@@ -4,7 +4,6 @@ import { SentMessageInfo } from 'nodemailer';
 import { UserEntity } from '../users/entities/user.entity';
 import { VerifyOtpInput } from './types/mailer.types';
 import { emailHtml } from '@toshstack/email';
-import { UserRole } from '@toshstack/domain';
 @Injectable()
 export class MailerService {
   constructor(private readonly mailerService: MailerServiceFs) {}
@@ -45,6 +44,7 @@ export class MailerService {
     email: string,
   ): Promise<SentMessageInfo> {
     if (!full_name || !email) return false;
+
     const html = await emailHtml({
       fullName: full_name,
       email: email,
